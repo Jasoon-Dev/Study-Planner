@@ -31,59 +31,59 @@ function TaskForm({ addTask }) {
   };
 
   return (
-    <div
-      onSubmit={handleSubmit}
-      className="bg-gray-200 dark:bg-gray-800 p-4 rounded-2xl shadow-md w-full max-w-lg">
+    <div className="bg-gray-200 dark:bg-gray-800 p-4 rounded-2xl shadow-md w-full max-w-lg">
       <h2 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
         Add Task
       </h2>
 
-      <input
-        type="text"
-        placeholder="Task Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        className="w-full mb-2 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-      />
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <input
+          type="text"
+          placeholder="Task Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        />
 
-      <input
-        type="text"
-        placeholder="Subject"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-        className="w-full mb-2 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-      />
+        <input
+          type="text"
+          placeholder="Subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        />
 
-      <select
-        value={priority}
-        onChange={(e) => setPriority(e.target.value)}
-        className="w-full mb-2 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-      >
-        <option>Low</option>
-        <option>Normal</option>
-        <option>High</option>
-      </select>
+        <select
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        >
+          <option>Low</option>
+          <option>Normal</option>
+          <option>High</option>
+        </select>
 
-      <input
-        type="date"
-        value={dueDate}
-        onChange={(e) => setDueDate(e.target.value)}
-        className="w-full mb-2 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-      />
+        <input
+          type="date"
+          value={dueDate}
+          onChange={(e) => setDueDate(e.target.value)}
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        />
 
-      <textarea
-        placeholder="Notes..."
-        value={notes}
-        onChange={(e) => setNotes(e.target.value)}
-        className="w-full mb-2 pb-20 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-      ></textarea>
+        <textarea
+          placeholder="Notes..."
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          className="w-full pb-20 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+        ></textarea>
 
-      <button
-        type="submit"
-        className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg"
-      >
-        Add
-      </button>
+        <button
+          type="submit"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg"
+        >
+          Add
+        </button>
+      </form>
     </div>
   );
 }
