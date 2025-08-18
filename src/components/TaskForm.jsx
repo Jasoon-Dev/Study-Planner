@@ -31,7 +31,7 @@ function TaskForm({ addTask }) {
   };
 
   return (
-    <form
+    <div
       onSubmit={handleSubmit}
       className="bg-gray-200 dark:bg-gray-800 p-4 rounded-2xl shadow-md w-full max-w-lg">
       <h2 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">
@@ -84,7 +84,7 @@ function TaskForm({ addTask }) {
       >
         Add
       </button>
-    </form>
+    </div>
   );
 }
 
